@@ -1,0 +1,44 @@
+{
+  "users": {
+    "title": "Users ",
+    "description": "Registered users in the system",
+    "x-id-field": "users_pkey",
+    "x-list-columns": [
+      "userid",
+      "username",
+      "active",
+      "is_admin"
+    ],
+    "properties": {
+      "users_pkey": {
+        "type": "integer",
+        "readOnly": true,
+        "x-hidden": 1
+      },
+      "userid": {
+        "type": "string",
+        "format": "email",
+        "x-order": 1
+      },
+      "passwd": {
+        "type": "string",
+        "format": "password",
+        "x-order": 2
+      },
+      "username": {
+        "type": "string",
+        "x-order": 3
+      },
+      "active": {
+        "type": "boolean",
+        "default": 0,
+        "x-order": 4
+      },
+      "is_admin": {
+        "type": "boolean",
+        "default": 0,
+        "x-order": 5
+      }
+    }
+  }
+}
